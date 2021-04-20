@@ -8,5 +8,10 @@
 		"name": "demo.GreeterGrpc",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
+	},
+	{
+		"name": "demo.ReactorGreeterGrpc",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
 	}
 ]
