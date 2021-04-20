@@ -6,7 +6,7 @@
 
     <groupId>org.mvnsearch</groupId>
     <artifactId>grpc-native-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +27,8 @@
         <native.build.args/>
         <!-- Customize Spring Boot classifier, useful in order to avoid a clash between Spring Boot repackaging and native-image-maven-plugin -->
         <classifier/>
-
+        <!-- `tiny` builder allows small footprint and reduced surface attack, you can also use `base` (the default) or `full` builders to have more tooling available in the image for an improved developer experience -->
+        <builder>paketobuildpacks/builder:tiny</builder>
     </properties>
 
     <dependencies>
@@ -112,6 +113,14 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <classifier>${classifier}</classifier>
+                    <image>
+                        <builder>${builder}</builder>
+                        <name>linuxchina/${project.build.finalName}:${project.version}</name>
+                        <env>
+                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                            <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>${native.build.args}</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+                        </env>
+                    </image>
                 </configuration>
             </plugin>
             <plugin>
