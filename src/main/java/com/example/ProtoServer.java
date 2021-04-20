@@ -1,12 +1,8 @@
 package com.example;
 
-import demo.CustomerProtos.Customer;
-import demo.CustomerProtos.CustomerRequest;
-import demo.GreeterGrpc;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.protobuf.services.ProtoReflectionService;
-import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -17,8 +13,7 @@ import java.util.logging.Logger;
 @Component
 public class ProtoServer {
 
-    private static final Logger logger = Logger
-            .getLogger(ProtoServer.class.getName());
+    private static final Logger logger = Logger.getLogger(ProtoServer.class.getName());
 
     private Server server;
 
@@ -28,7 +23,9 @@ public class ProtoServer {
         int port = 50052;
         server = ServerBuilder.forPort(port)
                 .addService(ProtoReflectionService.newInstance())
-                .addService(new GreeterImpl()).build().start();
+                //.addService(new GreeterImpl())
+                .addService(new GreeterReactiveImpl())
+                .build().start();
         logger.info("Server started, listening on " + port);
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
