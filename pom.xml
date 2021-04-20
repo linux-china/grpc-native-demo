@@ -19,7 +19,8 @@
         <protobuf.version>3.12.0</protobuf.version>
         <grpc.version>1.37.0</grpc.version>
         <graalvm.version>21.0.0.2</graalvm.version>
-<!--        <main.class>com.example.ProtoServer</main.class>-->
+        <spring-boot.version>2.4.5</spring-boot.version>
+        <spring-native.version>0.9.2</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
         <!-- Customize native-image arguments with this property -->
         <native.build.args/>
@@ -32,7 +33,7 @@
         <dependency>
             <groupId>org.springframework.experimental</groupId>
             <artifactId>spring-native</artifactId>
-            <version>0.9.2</version>
+            <version>${spring-native.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -66,7 +67,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.4.5</version>
+                <version>${spring-boot.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -86,7 +87,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.5</version>
+                <version>${spring-boot.version}</version>
                 <configuration>
                     <classifier>${classifier}</classifier>
                 </configuration>
@@ -120,7 +121,7 @@
                     <plugin>
                         <groupId>org.springframework.experimental</groupId>
                         <artifactId>spring-aot-maven-plugin</artifactId>
-                        <version>0.9.2</version>
+                        <version>${spring-native.version}</version>
                         <configuration>
                             <removeSpelSupport>true</removeSpelSupport>
                             <removeYamlSupport>true</removeYamlSupport>
