@@ -1,0 +1,6 @@
+version: '3.1'
+services:
+  grpc:
+    image: linuxchina/grpc-native-demo:1.0.0-SNAPSHOT
+    ports:
+      - "50052:50052"
