@@ -5,6 +5,7 @@ gRPC with Spring Native
 
 * Spring Native
 * Reactive gRPC support
+* Docker images build with Buildpacks
 
 # Attentions
 
