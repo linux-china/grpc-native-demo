@@ -6,6 +6,11 @@ gRPC with Spring Native
 * Spring Native
 * Reactive gRPC support
 
+# Attentions
+
+* grpc-netty-shaded: not supported by Spring Native
+* `option java_multiple_files = true`  preferred
+
 # References
 
 * Spring Native: https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/
