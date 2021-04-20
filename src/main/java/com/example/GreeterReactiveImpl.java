@@ -2,8 +2,10 @@ package com.example;
 
 import demo.CustomerProtos;
 import demo.ReactorGreeterGrpc;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+@Service
 public class GreeterReactiveImpl extends ReactorGreeterGrpc.GreeterImplBase {
     @Override
     public Mono<CustomerProtos.Customer> hello(Mono<CustomerProtos.CustomerRequest> request) {
