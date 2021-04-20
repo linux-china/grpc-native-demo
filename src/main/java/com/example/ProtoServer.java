@@ -3,6 +3,7 @@ package com.example;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.protobuf.services.ProtoReflectionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -16,6 +17,8 @@ public class ProtoServer {
     private static final Logger logger = Logger.getLogger(ProtoServer.class.getName());
 
     private Server server;
+    @Autowired
+    private GreeterReactiveImpl greeterReactive;
 
     @PostConstruct
     private void start() throws IOException {
@@ -24,7 +27,7 @@ public class ProtoServer {
         server = ServerBuilder.forPort(port)
                 .addService(ProtoReflectionService.newInstance())
                 //.addService(new GreeterImpl())
-                .addService(new GreeterReactiveImpl())
+                .addService(greeterReactive)
                 .build().start();
         logger.info("Server started, listening on " + port);
         Runtime.getRuntime().addShutdownHook(new Thread() {
