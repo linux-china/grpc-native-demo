@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+package demo;
+
+option java_package = "demo";
+option java_outer_classname = "CustomerProtos";
+
+service Greeter {
+    rpc Hello (CustomerRequest) returns (Customer) {
+    }
+}
+
+message CustomerRequest {
+}
+
+message Customer {
+    int32 id = 1;
+    string firstName = 2;
+    string lastName = 3;
+}
