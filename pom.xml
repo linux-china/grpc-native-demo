@@ -170,7 +170,7 @@
                         <artifactId>spring-aot-maven-plugin</artifactId>
                         <version>${spring-native.version}</version>
                         <configuration>
-                            <removeSpelSupport>true</removeSpelSupport>
+                            <removeSpelSupport>false</removeSpelSupport>
                             <removeYamlSupport>true</removeYamlSupport>
                         </configuration>
                         <executions>
