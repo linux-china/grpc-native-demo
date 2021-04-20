@@ -19,7 +19,7 @@
         <protobuf.version>3.15.8</protobuf.version>
         <grpc.version>1.37.0</grpc.version>
         <reactive-grpc.version>1.0.1</reactive-grpc.version>
-        <graalvm.version>21.0.0.2</graalvm.version>
+        <graalvm.version>21.1.0</graalvm.version>
         <spring-boot.version>2.4.5</spring-boot.version>
         <spring-native.version>0.9.2</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
