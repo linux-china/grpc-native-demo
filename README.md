@@ -3,7 +3,7 @@ gRPC with Spring Native
 
 # Features
 
-* Spring Boot integration
+* Spring Native
 * Reactive gRPC support
 
 # References
