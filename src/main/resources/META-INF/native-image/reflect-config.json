@@ -1,17 +1,22 @@
 [
-	{
-		"name": "demo.CustomerProtos$Customer",
-		"allDeclaredConstructors": true,
-		"allDeclaredMethods": true
-	},
-	{
-		"name": "demo.GreeterGrpc",
-		"allDeclaredConstructors": true,
-		"allDeclaredMethods": true
-	},
-	{
-		"name": "demo.ReactorGreeterGrpc",
-		"allDeclaredConstructors": true,
-		"allDeclaredMethods": true
-	}
+  {
+    "name": "demo.Customer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "demo.CustomerRequest",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "demo.GreeterGrpc",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "demo.ReactorGreeterGrpc",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  }
 ]
