@@ -61,10 +61,10 @@
             <artifactId>reactor-grpc-stub</artifactId>
             <version>${reactive-grpc.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>4.4.5</version>
+            <version>4.4.7</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.grpc</groupId>
@@ -75,7 +75,7 @@
                     <artifactId>netty-tcnative-boringssl-static</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -119,6 +119,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
+                    <mainClass>com.example.SpringBootApp</mainClass>
                     <classifier>${classifier}</classifier>
                     <image>
                         <builder>${builder}</builder>
