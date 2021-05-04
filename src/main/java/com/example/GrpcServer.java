@@ -12,7 +12,7 @@ import javax.annotation.PreDestroy;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-@Component
+//@Component
 public class GrpcServer {
 
     private static final Logger logger = Logger.getLogger(GrpcServer.class.getName());
