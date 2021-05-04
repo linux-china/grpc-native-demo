@@ -11,9 +11,10 @@ native-build:
    mvn -Pnative -DskipTests clean package
 
 # run native image agent to generate related configuration files
-native-assist: build
+native-assist:
+  mvn -DskipTests clean package spring-boot:repackage
   mkdir -p target/native-image
-  java -agentlib:native-image-agent=config-output-dir=./target/native-image/ -jar target/grpc-spring-native-demo-0.0.1-SNAPSHOT.jar
+  java -agentlib:native-image-agent=config-output-dir=./target/native-image/ -jar target/grpc-native-demo-1.0.0-SNAPSHOT.jar
 
 # docker image build with Buildpacks
 image-build:
