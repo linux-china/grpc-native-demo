@@ -17,7 +17,7 @@
         <os.plugin.version>1.7.0</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
         <protobuf.version>3.17.0</protobuf.version>
-        <grpc.version>1.37.0</grpc.version>
+        <grpc.version>1.37.1</grpc.version>
         <reactive-grpc.version>1.0.1</reactive-grpc.version>
         <graalvm.version>21.1.0</graalvm.version>
         <spring-boot.version>2.4.5</spring-boot.version>
