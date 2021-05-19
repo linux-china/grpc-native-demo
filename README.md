@@ -12,6 +12,10 @@ gRPC with Spring Native
 * grpc-netty-shaded: not supported by Spring Native
 * `option java_multiple_files = true`  preferred
 
+# native-image args
+
+* --gc=G1: linux only
+
 # References
 
 * Spring Native: https://docs.spring.io/spring-native/docs/current/reference/htmlsingle/
