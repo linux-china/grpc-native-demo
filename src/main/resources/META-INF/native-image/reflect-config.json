@@ -57,7 +57,7 @@
     "allDeclaredConstructors": true
   },
   {
-    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$Lambda$553/0x000000084039d840",
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$Lambda$550/0x0000000840396840",
     "allDeclaredFields": true,
     "allDeclaredMethods": true,
     "methods": [
@@ -92,6 +92,10 @@
     "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration"
   },
   {
+    "name": "org.lognet.springboot.grpc.autoconfigure.NettyServerBuilderSelector",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.lognet.springboot.grpc.autoconfigure.OnGrpcServerEnabled",
     "allDeclaredMethods": true
   },
@@ -102,7 +106,7 @@
     "allDeclaredConstructors": true
   },
   {
-    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$8a21ab1e",
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$926c0a63",
     "allDeclaredFields": true,
     "allDeclaredMethods": true,
     "allDeclaredConstructors": true,
@@ -121,7 +125,7 @@
     ]
   },
   {
-    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$8a21ab1e$$FastClassBySpringCGLIB$$ac2a7347",
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$926c0a63$$FastClassBySpringCGLIB$$67446f5e",
     "methods": [
       {
         "name": "<init>",
@@ -143,9 +147,6 @@
     ]
   },
   {
-    "name": "org.lognet.springboot.grpc.autoconfigure.ShadedNettyConfiguration"
-  },
-  {
     "name": "org.lognet.springboot.grpc.autoconfigure.metrics.GRpcMetricsAutoConfiguration$OnGrpcAndMeterRegistryEnabledCondition",
     "methods": [
       {
@@ -155,7 +156,288 @@
     ]
   },
   {
-    "name": "org.lognet.springboot.grpc.security.EnableGrpcSecurity",
+    "name": "io.grpc.BindableService",
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "io.grpc.ServerBuilder",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "addServices",
+        "parameterTypes": [
+          "java.util.List"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.internal.AbstractServerImplBuilder",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "addService",
+        "parameterTypes": [
+          "io.grpc.BindableService"
+        ]
+      },
+      {
+        "name": "addService",
+        "parameterTypes": [
+          "io.grpc.ServerServiceDefinition"
+        ]
+      },
+      {
+        "name": "addStreamTracerFactory",
+        "parameterTypes": [
+          "io.grpc.ServerStreamTracer$Factory"
+        ]
+      },
+      {
+        "name": "addTransportFilter",
+        "parameterTypes": [
+          "io.grpc.ServerTransportFilter"
+        ]
+      },
+      {
+        "name": "build",
+        "parameterTypes": []
+      },
+      {
+        "name": "compressorRegistry",
+        "parameterTypes": [
+          "io.grpc.CompressorRegistry"
+        ]
+      },
+      {
+        "name": "decompressorRegistry",
+        "parameterTypes": [
+          "io.grpc.DecompressorRegistry"
+        ]
+      },
+      {
+        "name": "directExecutor",
+        "parameterTypes": []
+      },
+      {
+        "name": "executor",
+        "parameterTypes": [
+          "java.util.concurrent.Executor"
+        ]
+      },
+      {
+        "name": "fallbackHandlerRegistry",
+        "parameterTypes": [
+          "io.grpc.HandlerRegistry"
+        ]
+      },
+      {
+        "name": "handshakeTimeout",
+        "parameterTypes": [
+          "long",
+          "java.util.concurrent.TimeUnit"
+        ]
+      },
+      {
+        "name": "intercept",
+        "parameterTypes": [
+          "io.grpc.ServerInterceptor"
+        ]
+      },
+      {
+        "name": "setBinaryLog",
+        "parameterTypes": [
+          "io.grpc.BinaryLog"
+        ]
+      },
+      {
+        "name": "toString",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.AbstractNettyHandler",
+    "methods": [
+      {
+        "name": "channelActive",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext"
+        ]
+      },
+      {
+        "name": "exceptionCaught",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Throwable"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.NettyServer$1"
+  },
+  {
+    "name": "io.grpc.netty.NettyServerBuilder",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "forPort",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "maxInboundMessageSize",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "maxInboundMetadataSize",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "useTransportSecurity",
+        "parameterTypes": [
+          "java.io.File",
+          "java.io.File"
+        ]
+      },
+      {
+        "name": "useTransportSecurity",
+        "parameterTypes": [
+          "java.io.InputStream",
+          "java.io.InputStream"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.NettyServerHandler",
+    "methods": [
+      {
+        "name": "channelInactive",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext"
+        ]
+      },
+      {
+        "name": "close",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "io.netty.channel.ChannelPromise"
+        ]
+      },
+      {
+        "name": "write",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Object",
+          "io.netty.channel.ChannelPromise"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.ProtocolNegotiators$GrpcNegotiationHandler",
+    "methods": [
+      {
+        "name": "userEventTriggered",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Object"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.ProtocolNegotiators$ProtocolNegotiationHandler",
+    "methods": [
+      {
+        "name": "userEventTriggered",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Object"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.ProtocolNegotiators$WaitUntilActiveHandler",
+    "methods": [
+      {
+        "name": "channelActive",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.netty.WriteBufferingAndExceptionHandler",
+    "methods": [
+      {
+        "name": "channelInactive",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext"
+        ]
+      },
+      {
+        "name": "channelRead",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Object"
+        ]
+      },
+      {
+        "name": "close",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "io.netty.channel.ChannelPromise"
+        ]
+      },
+      {
+        "name": "connect",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.net.SocketAddress",
+          "java.net.SocketAddress",
+          "io.netty.channel.ChannelPromise"
+        ]
+      },
+      {
+        "name": "exceptionCaught",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Throwable"
+        ]
+      },
+      {
+        "name": "flush",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext"
+        ]
+      },
+      {
+        "name": "write",
+        "parameterTypes": [
+          "io.netty.channel.ChannelHandlerContext",
+          "java.lang.Object",
+          "io.netty.channel.ChannelPromise"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "io.grpc.services.HealthStatusManager",
+    "allDeclaredFields": true,
     "allDeclaredMethods": true
   }
 ]
