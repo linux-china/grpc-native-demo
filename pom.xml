@@ -17,11 +17,11 @@
         <os.plugin.version>1.7.0</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
         <protobuf.version>3.17.3</protobuf.version>
-        <grpc.version>1.38.0</grpc.version>
+        <grpc.version>1.39.0</grpc.version>
         <reactive-grpc.version>1.0.1</reactive-grpc.version>
         <graalvm.version>21.1.0</graalvm.version>
-        <spring-boot.version>2.5.1</spring-boot.version>
-        <spring-native.version>0.10.0</spring-native.version>
+        <spring-boot.version>2.5.2</spring-boot.version>
+        <spring-native.version>0.10.1</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
         <!-- Customize native-image arguments with this property -->
         <native.build.args/>
@@ -199,7 +199,7 @@
                     <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
-                        <version>0.9.0</version>
+                        <version>0.9.1</version>
                         <configuration>
                             <mainClass>${main.class}</mainClass>
                             <imageName>${project.artifactId}</imageName>
