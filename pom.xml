@@ -18,7 +18,7 @@
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
         <protobuf.version>3.17.3</protobuf.version>
         <grpc.version>1.39.0</grpc.version>
-        <reactive-grpc.version>1.0.1</reactive-grpc.version>
+        <reactive-grpc.version>1.1.0</reactive-grpc.version>
         <graalvm.version>21.1.0</graalvm.version>
         <spring-boot.version>2.5.2</spring-boot.version>
         <spring-native.version>0.10.1</spring-native.version>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>4.5.4</version>
+            <version>4.5.5</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.grpc</groupId>
