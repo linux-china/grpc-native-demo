@@ -19,7 +19,7 @@
         <protobuf.version>3.17.3</protobuf.version>
         <grpc.version>1.39.0</grpc.version>
         <reactive-grpc.version>1.1.0</reactive-grpc.version>
-        <graalvm.version>21.1.0</graalvm.version>
+        <graalvm.version>21.2.0</graalvm.version>
         <spring-boot.version>2.5.2</spring-boot.version>
         <spring-native.version>0.10.1</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
@@ -80,6 +80,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+               <groupId>io.netty</groupId>
+               <artifactId>netty-bom</artifactId>
+               <version>4.1.66.Final</version>
+               <scope>import</scope>
+               <type>pom</type>
+            </dependency>
             <dependency>
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-bom</artifactId>
