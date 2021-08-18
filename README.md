@@ -22,3 +22,4 @@ gRPC with Spring Native
 * Reactive gRPC: https://github.com/salesforce/reactive-grpc
 * gRPC-Java:  https://github.com/grpc/grpc-java
 * gRPC Home: https://grpc.io/
+* Maven plugin for GraalVM Native Image building: https://graalvm.github.io/native-build-tools/0.9.3/maven-plugin.html
