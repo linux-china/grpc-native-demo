@@ -20,8 +20,8 @@
         <grpc.version>1.40.0</grpc.version>
         <reactive-grpc.version>1.1.0</reactive-grpc.version>
         <graalvm.version>21.2.0</graalvm.version>
-        <spring-boot.version>2.5.3</spring-boot.version>
-        <spring-native.version>0.10.2</spring-native.version>
+        <spring-boot.version>2.5.4</spring-boot.version>
+        <spring-native.version>0.10.3</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
         <!-- Customize native-image arguments with this property -->
         <native.build.args/>
