@@ -1,0 +1,4 @@
+GRPC localhost:50052/demo.Greeter/Hello
+
+{
+}
