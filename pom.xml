@@ -16,12 +16,12 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <os.plugin.version>1.7.0</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
-        <protobuf.version>3.19.1</protobuf.version>
-        <grpc.version>1.42.1</grpc.version>
+        <protobuf.version>3.19.3</protobuf.version>
+        <grpc.version>1.43.2</grpc.version>
         <reactive-grpc.version>1.2.3</reactive-grpc.version>
         <graalvm.version>21.3.0</graalvm.version>
-        <spring-boot.version>2.5.6</spring-boot.version>
-        <spring-native.version>0.10.5</spring-native.version>
+        <spring-boot.version>2.6.3</spring-boot.version>
+        <spring-native.version>0.11.2</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
         <!-- Customize native-image arguments with this property -->
         <native.build.args/>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>4.5.10</version>
+            <version>4.6.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.grpc</groupId>
@@ -83,7 +83,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-bom</artifactId>
-                <version>4.1.70.Final</version>
+                <version>4.1.73.Final</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -206,7 +206,7 @@
                     <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
-                        <version>0.9.8</version>
+                        <version>0.9.9</version>
                         <configuration>
                             <mainClass>${main.class}</mainClass>
                             <imageName>${project.artifactId}</imageName>
