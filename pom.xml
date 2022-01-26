@@ -19,7 +19,6 @@
         <protobuf.version>3.19.3</protobuf.version>
         <grpc.version>1.43.2</grpc.version>
         <reactive-grpc.version>1.2.3</reactive-grpc.version>
-        <graalvm.version>21.3.0</graalvm.version>
         <spring-boot.version>2.6.3</spring-boot.version>
         <spring-native.version>0.11.2</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
@@ -75,6 +74,12 @@
                     <artifactId>netty-tcnative-boringssl-static</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!-- GraalVM native compatible-->
+        <dependency>
+            <groupId>com.ecwid.consul</groupId>
+            <artifactId>consul-api</artifactId>
+            <version>1.4.5</version>
         </dependency>
     </dependencies>
 
