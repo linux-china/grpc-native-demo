@@ -1,29 +1,49 @@
 [
   {
     "name": "demo.Customer",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
+  },
+  {
+    "name": "demo.CustomerOrBuilder",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
   },
   {
     "name": "demo.CustomerRequest",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
   },
   {
-    "name": "demo.ReactorGreeterGrpc",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
+    "name": "demo.CustomerRequestOrBuilder",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
+  },
+  {
+    "name": "demo.ReactorGreeterGrpc$GreeterImplBase",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "bindService",
+        "parameterTypes": []
+      }
+    ]
   },
   {
     "name": "io.grpc.BindableService",
-    "allDeclaredMethods": true,
-    "allPublicMethods": true
+    "queryAllDeclaredMethods": true,
+    "queryAllPublicMethods": true
   },
   {
     "name": "io.grpc.ServerBuilder",
     "allDeclaredFields": true,
-    "allDeclaredMethods": true,
-    "methods": [
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
       {
         "name": "addServices",
         "parameterTypes": [
@@ -33,10 +53,26 @@
     ]
   },
   {
+    "name": "io.grpc.ServerInterceptor",
+    "queryAllDeclaredMethods": true,
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "io.grpc.health.v1.HealthGrpc$HealthImplBase",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "bindService",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
     "name": "io.grpc.internal.AbstractServerImplBuilder",
     "allDeclaredFields": true,
-    "allDeclaredMethods": true,
-    "methods": [
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
       {
         "name": "addService",
         "parameterTypes": [
@@ -64,6 +100,12 @@
       {
         "name": "build",
         "parameterTypes": []
+      },
+      {
+        "name": "callExecutor",
+        "parameterTypes": [
+          "io.grpc.ServerCallExecutorSupplier"
+        ]
       },
       {
         "name": "compressorRegistry",
@@ -120,7 +162,7 @@
   },
   {
     "name": "io.grpc.netty.AbstractNettyHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "channelActive",
         "parameterTypes": [
@@ -142,8 +184,8 @@
   {
     "name": "io.grpc.netty.NettyServerBuilder",
     "allDeclaredFields": true,
-    "allDeclaredMethods": true,
-    "methods": [
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
       {
         "name": "forPort",
         "parameterTypes": [
@@ -180,7 +222,7 @@
   },
   {
     "name": "io.grpc.netty.NettyServerHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "channelInactive",
         "parameterTypes": [
@@ -206,7 +248,7 @@
   },
   {
     "name": "io.grpc.netty.ProtocolNegotiators$GrpcNegotiationHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "userEventTriggered",
         "parameterTypes": [
@@ -218,7 +260,7 @@
   },
   {
     "name": "io.grpc.netty.ProtocolNegotiators$ProtocolNegotiationHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "userEventTriggered",
         "parameterTypes": [
@@ -230,7 +272,7 @@
   },
   {
     "name": "io.grpc.netty.ProtocolNegotiators$WaitUntilActiveHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "channelActive",
         "parameterTypes": [
@@ -241,7 +283,7 @@
   },
   {
     "name": "io.grpc.netty.WriteBufferingAndExceptionHandler",
-    "methods": [
+    "queriedMethods": [
       {
         "name": "channelInactive",
         "parameterTypes": [
@@ -295,8 +337,657 @@
     ]
   },
   {
-    "name": "io.grpc.services.HealthStatusManager",
+    "name": "org.lognet.springboot.grpc.FailureHandlingSupport",
     "allDeclaredFields": true,
-    "allDeclaredMethods": true
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.FailureHandlingSupport$$EnhancerBySpringCGLIB$$f39db775",
+    "fields": [
+      {
+        "name": "CGLIB$CALLBACK_FILTER"
+      },
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "CGLIB$SET_THREAD_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.GRpcGlobalInterceptor",
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.GRpcServerBuilderConfigurer",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.GRpcServerRunner",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "getPhase",
+        "parameterTypes": []
+      },
+      {
+        "name": "isRunning",
+        "parameterTypes": []
+      },
+      {
+        "name": "start",
+        "parameterTypes": []
+      },
+      {
+        "name": "stop",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.GRpcService",
+    "queryAllDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "interceptors",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.GRpcServicesRegistry",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "afterPropertiesSet",
+        "parameterTypes": []
+      },
+      {
+        "name": "setApplicationContext",
+        "parameterTypes": [
+          "org.springframework.context.ApplicationContext"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.ConditionalOnMissingErrorHandler",
+    "queryAllDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "value",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "configurator",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.GRpcServerBuilderConfigurer",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      },
+      {
+        "name": "exceptionHandlerInterceptor",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.FailureHandlingSupport",
+          "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerMethodResolver",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      },
+      {
+        "name": "exceptionHandlerMethodResolver",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.GRpcServicesRegistry",
+          "org.springframework.context.ApplicationContext"
+        ]
+      },
+      {
+        "name": "failureHandlingSupport",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerMethodResolver"
+        ]
+      },
+      {
+        "name": "gRpcServerProperties",
+        "parameterTypes": []
+      },
+      {
+        "name": "grpcServerRunner",
+        "parameterTypes": [
+          "java.util.function.Consumer",
+          "io.grpc.ServerBuilder"
+        ]
+      },
+      {
+        "name": "grpcServicesRegistry",
+        "parameterTypes": []
+      },
+      {
+        "name": "serverBuilderConfigurer",
+        "parameterTypes": []
+      },
+      {
+        "name": "socketAddressConverter",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$EnhancerBySpringCGLIB$$4f61f54f",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "fields": [
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "CGLIB$SET_STATIC_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "configurator",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.GRpcServerBuilderConfigurer",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      },
+      {
+        "name": "exceptionHandlerInterceptor",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.FailureHandlingSupport",
+          "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerMethodResolver",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      },
+      {
+        "name": "exceptionHandlerMethodResolver",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.GRpcServicesRegistry",
+          "org.springframework.context.ApplicationContext"
+        ]
+      },
+      {
+        "name": "failureHandlingSupport",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerMethodResolver"
+        ]
+      },
+      {
+        "name": "gRpcServerProperties",
+        "parameterTypes": []
+      },
+      {
+        "name": "grpcInprocessServerRunner",
+        "parameterTypes": [
+          "java.util.function.Consumer",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      },
+      {
+        "name": "grpcServerRunner",
+        "parameterTypes": [
+          "java.util.function.Consumer",
+          "io.grpc.ServerBuilder"
+        ]
+      },
+      {
+        "name": "grpcServicesRegistry",
+        "parameterTypes": []
+      },
+      {
+        "name": "serverBuilderConfigurer",
+        "parameterTypes": []
+      },
+      {
+        "name": "skipConsulDiscoveryBinding",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$EnhancerBySpringCGLIB$$4f61f54f$$FastClassBySpringCGLIB$$56144401",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$FastClassBySpringCGLIB$$393f56e6",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$$Lambda$601/0x000000080100fbf8",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "accept",
+        "parameterTypes": [
+          "java.lang.Object"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcAutoConfiguration$2",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "convert",
+        "parameterTypes": [
+          "java.lang.Object"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "init",
+        "parameterTypes": []
+      },
+      {
+        "name": "setEnableReflection",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setPort",
+        "parameterTypes": [
+          "java.lang.Integer"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "validatingInterceptor",
+        "parameterTypes": [
+          "javax.validation.Validator",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcValidationProperties",
+          "org.lognet.springboot.grpc.FailureHandlingSupport"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$$EnhancerBySpringCGLIB$$8e974845",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "fields": [
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "CGLIB$SET_STATIC_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "validatingInterceptor",
+        "parameterTypes": [
+          "javax.validation.Validator",
+          "org.lognet.springboot.grpc.autoconfigure.GRpcValidationProperties",
+          "org.lognet.springboot.grpc.FailureHandlingSupport"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$$EnhancerBySpringCGLIB$$8e974845$$FastClassBySpringCGLIB$$9aac182d",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$$FastClassBySpringCGLIB$$c3f3011c",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$DefaultValidationHandlerConfig",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$DefaultValidationHandlerConfig$$EnhancerBySpringCGLIB$$e0081d43",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "fields": [
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "CGLIB$SET_STATIC_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationConfiguration$DefaultValidationHandlerConfig$DefaultValidationErrorHandler",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.util.Optional"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.GRpcValidationProperties",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.NettyServerBuilderSelector",
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.OnGrpcServerEnabled",
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.OnMissingErrorHandlerCondition",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "nettyServerBuilder",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$f48502b8",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "fields": [
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "CGLIB$SET_STATIC_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ],
+    "queriedMethods": [
+      {
+        "name": "nettyServerBuilder",
+        "parameterTypes": [
+          "org.lognet.springboot.grpc.autoconfigure.GRpcServerProperties"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$EnhancerBySpringCGLIB$$f48502b8$$FastClassBySpringCGLIB$$1486960d",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.PureNettyConfiguration$$FastClassBySpringCGLIB$$2c19c02f",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.lang.Class"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.autoconfigure.metrics.GRpcMetricsAutoConfiguration$OnGrpcAndMeterRegistryEnabledCondition",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.health.DefaultHealthStatusService",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "queriedMethods": [
+      {
+        "name": "check",
+        "parameterTypes": [
+          "io.grpc.health.v1.HealthCheckRequest",
+          "io.grpc.stub.StreamObserver"
+        ]
+      },
+      {
+        "name": "onShutdown",
+        "parameterTypes": []
+      },
+      {
+        "name": "setStatus",
+        "parameterTypes": [
+          "java.lang.String",
+          "io.grpc.health.v1.HealthCheckResponse$ServingStatus"
+        ]
+      },
+      {
+        "name": "statuses",
+        "parameterTypes": []
+      },
+      {
+        "name": "watch",
+        "parameterTypes": [
+          "io.grpc.health.v1.HealthCheckRequest",
+          "io.grpc.stub.StreamObserver"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.health.DefaultHealthStatusService$$EnhancerBySpringCGLIB$$69bbb6f5",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queryAllDeclaredConstructors": true,
+    "fields": [
+      {
+        "name": "CGLIB$FACTORY_DATA"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "CGLIB$SET_STATIC_CALLBACKS",
+        "parameterTypes": [
+          "org.springframework.cglib.proxy.Callback[]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.health.ManagedHealthStatusService",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.recovery.ErrorHandlerAdapter",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.recovery.GRpcExceptionHandler",
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerInterceptor",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "getOrder",
+        "parameterTypes": []
+      },
+      {
+        "name": "interceptCall",
+        "parameterTypes": [
+          "io.grpc.ServerCall",
+          "io.grpc.Metadata",
+          "io.grpc.ServerCallHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.lognet.springboot.grpc.recovery.GRpcExceptionHandlerMethodResolver",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.recovery.GRpcServiceAdvice",
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "org.lognet.springboot.grpc.validation.ValidatingInterceptor",
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true,
+    "queriedMethods": [
+      {
+        "name": "getOrder",
+        "parameterTypes": []
+      },
+      {
+        "name": "interceptCall",
+        "parameterTypes": [
+          "io.grpc.ServerCall",
+          "io.grpc.Metadata",
+          "io.grpc.ServerCallHandler"
+        ]
+      }
+    ]
   }
 ]
