@@ -16,11 +16,11 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <os.plugin.version>1.7.0</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
-        <protobuf.version>3.20.1</protobuf.version>
+        <protobuf.version>3.21.1</protobuf.version>
         <grpc.version>1.46.0</grpc.version>
         <reactive-grpc.version>1.2.3</reactive-grpc.version>
-        <spring-boot.version>2.6.7</spring-boot.version>
-        <spring-native.version>0.11.5</spring-native.version>
+        <spring-boot.version>2.7.0</spring-boot.version>
+        <spring-native.version>0.12.0</spring-native.version>
         <main.class>com.example.SpringBootApp</main.class>
         <!-- Customize native-image arguments with this property -->
         <native.build.args/>
