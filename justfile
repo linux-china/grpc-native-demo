@@ -8,7 +8,7 @@ grpc-call:
 
 # native build
 native-build:
-   mvn -Pnative -DskipTests clean package
+   mvn -Pnative -DskipTests clean package native:compile
 
 # run native image agent to generate related configuration files
 native-assist:
