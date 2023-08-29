@@ -3,7 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <groupId>org.mvnsearch</groupId>
     <artifactId>grpc-native-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -16,18 +21,10 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <os.plugin.version>1.7.0</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
-        <protobuf.version>3.22.2</protobuf.version>
-        <grpc.version>1.54.0</grpc.version>
-        <reactive-grpc.version>1.2.3</reactive-grpc.version>
-        <spring-boot.version>2.7.10</spring-boot.version>
-        <spring-native.version>0.12.2</spring-native.version>
+        <protobuf.version>3.24.2</protobuf.version>
+        <grpc.version>1.57.2</grpc.version>
+        <reactive-grpc.version>1.2.4</reactive-grpc.version>
         <main.class>com.example.SpringBootApp</main.class>
-        <!-- Customize native-image arguments with this property -->
-        <native.build.args/>
-        <!-- Customize Spring Boot classifier, useful in order to avoid a clash between Spring Boot repackaging and native-image-maven-plugin -->
-        <classifier/>
-        <!-- `tiny` builder allows small footprint and reduced surface attack, you can also use `base` (the default) or `full` builders to have more tooling available in the image for an improved developer experience -->
-        <builder>paketobuildpacks/builder:tiny</builder>
     </properties>
 
     <dependencies>
@@ -63,7 +60,7 @@
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>4.9.0</version>
+            <version>5.1.4</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.grpc</groupId>
@@ -75,12 +72,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- GraalVM native compatible-->
-        <dependency>
-            <groupId>com.ecwid.consul</groupId>
-            <artifactId>consul-api</artifactId>
-            <version>1.4.5</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -88,7 +79,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-bom</artifactId>
-                <version>4.1.85.Final</version>
+                <version>4.1.97.Final</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -106,13 +97,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -129,7 +113,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.SpringBootApp</mainClass>
                     <classifier>${classifier}</classifier>
@@ -148,9 +131,11 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>${protobuf.plugin.version}</version>
                 <configuration>
-                    <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
+                    <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}
+                    </protocArtifact>
                     <pluginId>grpc-java</pluginId>
-                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+                    </pluginArtifact>
                     <protocPlugins>
                         <protocPlugin>
                             <id>reactor-grpc</id>
@@ -172,82 +157,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>native</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework.experimental</groupId>
-                    <artifactId>spring-native</artifactId>
-                    <version>${spring-native.version}</version>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.experimental</groupId>
-                        <artifactId>spring-aot-maven-plugin</artifactId>
-                        <version>${spring-native.version}</version>
-                        <configuration>
-                            <removeSpelSupport>true</removeSpelSupport>
-                            <removeYamlSupport>true</removeYamlSupport>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>test-generate</id>
-                                <goals>
-                                    <goal>test-generate</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>generate</id>
-                                <goals>
-                                    <goal>generate</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.graalvm.buildtools</groupId>
-                        <artifactId>native-maven-plugin</artifactId>
-                        <version>0.9.19</version>
-                        <configuration>
-                            <mainClass>${main.class}</mainClass>
-                            <imageName>${project.artifactId}</imageName>
-                            <buildArgs>${native.build.args}</buildArgs>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>build-native</id>
-                                <goals>
-                                    <goal>build</goal>
-                                </goals>
-                                <phase>package</phase>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
-    <repositories>
-        <repository>
-            <id>spring-release</id>
-            <name>Spring release</name>
-            <url>https://repo.spring.io/release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-release</id>
-            <name>Spring release</name>
-            <url>https://repo.spring.io/release</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
