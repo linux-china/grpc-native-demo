@@ -132,3 +132,5 @@ buildNumber.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,java,jetbrains+all
 
+.envrc
+dependencies.txt
