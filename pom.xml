@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.3</version>
+        <version>3.4.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.mvnsearch</groupId>
@@ -21,8 +21,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <os.plugin.version>1.7.1</os.plugin.version>
         <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
-        <protobuf.version>4.28.0</protobuf.version>
-        <grpc.version>1.66.0</grpc.version>
+        <protobuf.version>4.29.0</protobuf.version>
+        <grpc.version>1.68.2</grpc.version>
         <reactive-grpc.version>1.2.4</reactive-grpc.version>
         <main.class>com.example.SpringBootApp</main.class>
     </properties>
@@ -79,7 +79,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-bom</artifactId>
-                <version>4.1.112.Final</version>
+                <version>4.1.115.Final</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
